@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cmn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./nextexam.css" rel="stylesheet">
+    <link href="//fonts.font.im/css?family=Montserrat:500i" rel="stylesheet">
+    <title>考试时钟</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <span class="dropdown">
+                <span id="type">类型</span>▾
+                <p>
+                    <a onclick="change(this.innerHTML)">高二理科</a>
+                    <a onclick="change(this.innerHTML)">高二文科</a>
+                    <a onclick="change(this.innerHTML)">高一</a>
+                </p>
+            </span>&emsp;
+            <span onclick="fullscreen()">全屏/退出</span>
+        </div>
+        <h6>
+            <span>沉着冷静&emsp;诚信考试</span>
+            <!-- <span id="progress">进度</span> -->
+        </h6>
+        <h6 class="half">
+            <a href="./examtimer.html">
+                此页面公测中，点此返回高二考试计时。
+            </a>
+        </h6>
+        <nav class="bar">
+            <nav id="bar"></nav>
+        </nav>
+        <div class="card">
+            <div>
+                <h3 id="subject">科目</h3>
+                <h6 id="duration">详细信息</h6>
+            </div>
+            <div>
+                <h1 id="time">时间</h1>
+            </div>
+            <div>
+                <h3 id="timer">计时</h3>
+                <h6 id="next">提示文字</h6>
+            </div>
+        </div>
+        <div class="half">
+            <p id="tell"></p>
+            <p>纸鹿 × 宝中野生技术协会</p>
+        </div>
+    </div>
+</body>
+
+<script src="./nextexam.js"></script>
+
+</html>
