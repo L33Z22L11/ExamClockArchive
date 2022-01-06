@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./exam.css" rel="stylesheet">
     <link href="//fonts.font.im/css?family=Montserrat:500i" rel="stylesheet">
-    <title>文科考试时钟</title>
+    <title>理科考试时钟</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
             <span>沉着冷静&emsp;诚信考试</span>&emsp;
             <span class="menu">
                 <a href="./nextexam.html">进入新版</a>&emsp;
-                <a href="./">切换理科</a>&emsp;
+                <a href="./examtimer2.html">切换文科</a>&emsp;
                 <span onclick="fullscreen()">全屏/退出</span>
             </span>
         </h6>
@@ -44,7 +44,6 @@
     window.onload = function () {
         // alert("");
         end = 0;
-        sMin = '<span class="half">min</span>';
         examTimer();
     }
 
@@ -76,11 +75,11 @@
     function examTimer() {
         now = new Date();
         update("数学", "2021-04-29T14:00", "2021-04-29T16:00");
-        update("历史", "2021-04-29T16:30", "2021-04-29T18:10");
+        update("物理", "2021-04-29T16:30", "2021-04-29T18:10");
         update("语文", "2021-04-30T07:40", "2021-04-30T10:10");
-        update("地理", "2021-04-30T10:40", "2021-04-30T12:20");
+        update("生物", "2021-04-30T10:40", "2021-04-30T12:10");
         update("英语", "2021-04-30T14:00", "2021-04-30T16:00");
-        update("政治", "2021-04-30T16:30", "2021-04-30T18:10");
+        update("化学", "2021-04-30T16:30", "2021-04-30T18:10");
         detail = start.getHours() + ":" + getMM(start) +
             "~" + end.getHours() + ":" + getMM(end);
         if (now < (start - 12E5)) {
