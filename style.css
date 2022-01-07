@@ -5,7 +5,7 @@
   transition: 0.2s;
 }
 html {
-  font-family: "Montserrat";
+  font-family: "Montserrat",sans-serif;
 
   color: #333;
   background: #eee;
@@ -16,6 +16,7 @@ a {
 ::selection{
   color: #3af;
   text-shadow: 0 0 1em #08f;
+  background: rgba(255,255,255,0.5);
 }
 .ib {
   display: inline-block;
@@ -25,8 +26,8 @@ a {
 }
 .dim {
   font-size: 0.8em;
-  opacity: 0.5;
-  /* color: #777; */
+  /* opacity: 0.5; */
+  color: rgba(0, 0, 0, 0.5);
 }
 .center {
   text-align: center;
@@ -66,10 +67,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1em;
 }
 #verlist > div {
-  width: 18rem;
+  margin: 0.5rem;
+  width: 15rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   background: #fff;
