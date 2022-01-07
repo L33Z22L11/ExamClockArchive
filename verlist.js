@@ -52,7 +52,7 @@ var ver = [{
 },];
 verlist = "";
 for (var i = 0; i < ver.length; i++) {
-  verlist += "<div>\n  <div class='sb'>\n    <div>\n      <h2>" + ver[i].name + "</h2>\n      <p class='dim'>更新日期: " + ver[i].date + "</p>\n    </div>\n    <a href='./" + ver[i].date + "' class='pribtn'>访问</a>\n  </div>\n  <p>" + ver[i].content + "</p>\n</div>\n";
+  verlist += "<div>\n  <div class='sb'>\n    <div>\n      <h2>" + ver[i].name + "</h2>\n      <p class='dim'>更新日期: " + ver[i].date + "</p>\n    </div>\n    <a href='./" + ver[i].date + "/' class='pribtn'>访问</a>\n  </div>\n  <p>" + ver[i].content + "</p>\n</div>\n";
 }
 console.log(verlist);
 document.getElementById("verlist").innerHTML = verlist;
