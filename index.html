@@ -8,7 +8,8 @@
   <link rel="shortcut icon" href="/logo_g_64.png" type="image/x-icon">
   <base target="_blank">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.font.im/css?family=Montserrat:400|700" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.font.im/css?family=Montserrat:400|800" rel="stylesheet">
   <title>考试时钟时光局 | Archive of Exam-Clock</title>
 </head>
 
@@ -19,34 +20,59 @@
         <img src="/logo_g_64.png" alt="Exam-Clock Logo" height="16px">
         <h3 class="ib">考试时钟时光局 <span class="dim">Archive of Exam-Clock</span></h3>
       </div>
-      <div class="sb dim" style="gap: 1em;">
+      <div class="sb dim">
         <a href="https://hi.thisis.host">野生技协官网</a>
         <a href="https://zhilu.cyou">纸鹿小站</a>
       </div>
     </div>
   </nav>
 
-  <section class="banner">
-    <div></div>
-    <div>
-      <h1 class="dp1"><br>
-        考我所试 钟你以时</h1><br>
-      <p id="slogan" title="Actually a progress bar XD"></p>
-      <p>2021.4 ~ 2031.4</p>
-      <script src="./slogan.js"></script>
-      <br>
-      <a href="https://exam.thisis.host" class="mainbtn pribtn">在线考试时钟</a>
+  <div id="msg" onclick="this.style.display='';">
+    <div class="sb">
+      <i class="fas fa-info-circle"></i>
+      <a class="fas fa-times"></a>
     </div>
+    <span id="msgcontent"></span>
+    <script>eleMsg = document.getElementById("msg");</script>
+  </div>
+
+  <section class="banner">
+    <div>
+      <h1 class="dp1"><br>考我所试 钟你以时</h1><br>
+      <p class="dim">2021.4 ~ 2031.4</p>
+      <p id="slogan" title="Actually a progress bar XD"></p>
+      <script>!function (t) {
+          var k = ~~((new Date() - 16172352e5) / 3155328e5 * t.length);
+          document.getElementById("slogan").innerHTML = "<mark>" + t.slice(0, k - t.length) + "</mark>" + t.slice(k);
+        }("Examined what we've been trying hard many times, Clock spend what's witnessed our growth concerning you.");
+      </script>
+      <br>
+      <a href="https://exam.thisis.host" class="dp2 pribtn">在线考试时钟</a>
+    </div>
+  </section>
+  <section>
+    <div class="sb">
+      <h2><i class="fas fa-images"></i> 宝中一卷图库</h2><br>
+      <a class="pribtn" href="https://img.xuewuzhibu.cn/album/h8p">访问</a>
+    </div>
+    <br>
+    <p class="dim"><i class="far fa-image"></i> <span id="bg"></span>
+      <a onclick="bg();"><i class="fas fa-sync-alt"></i></a><br>
+      <i class="fab fa-qq"></i> 投稿QQ: 2399052066<br>
+      <i class="fas fa-server"></i> 托管: 学无止步图床<br>
+    </p>
+    <div id="bglist"></div>
   </section>
 
   <section>
-    <h2>主要版本一览</h2>
-    <br>
+    <h2><i class="fas fa-history"></i> 主要版本一览</h2><br>
     <div id="verlist">加载中，请稍后
       <!-- li*1>(h4>a{访问})+p{更新日期: }+p{更新内容: } -->
     </div>
     <script src="./verlist.js"></script>
   </section>
+  <script src="https://exam.thisis.host/pubfunc.js"></script>
+  <script src="https://exam.thisis.host/gallery.js"></script>
 </body>
 
 </html>

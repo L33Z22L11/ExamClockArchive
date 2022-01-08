@@ -1,22 +1,29 @@
 * {
   margin: 0;
   padding: 0;
-  color: inherit;
   transition: 0.2s;
+  color: inherit;
 }
 html {
-  font-family: "Montserrat",sans-serif;
-
-  color: #333;
-  background: #eee;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background: #eee fixed center url(/campus.jpg);
+  background-size: cover;
+}
+body {
+  background: rgba(0, 0, 0, 0.2);
 }
 a {
+  cursor: pointer;
   text-decoration: none;
 }
-::selection{
-  color: #3af;
-  text-shadow: 0 0 1em #08f;
-  background: rgba(255,255,255,0.5);
+a:hover {
+ text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+}
+::selection {
+  /* color: #3af; */
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 2px 4px 1em #08f;
 }
 .ib {
   display: inline-block;
@@ -24,10 +31,13 @@ a {
 .dp1 {
   font-size: 3em;
 }
+.dp2 {
+  font-size: 1.5em;
+}
 .dim {
   font-size: 0.8em;
-  /* opacity: 0.5; */
-  color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  /* color: rgba(255, 255, 255, 0.5); */
 }
 .center {
   text-align: center;
@@ -36,9 +46,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1em;
 }
 section {
   padding: 3em 0;
+}
+body > * {
+  box-shadow: 0 4px 1em rgba(0, 0, 0, 0.1);
 }
 body > * > *,
 .wrap {
@@ -49,49 +63,96 @@ body > * > *,
 }
 nav {
   position: fixed;
+  z-index: 1;
   width: 100%;
   padding: 0.5em 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    30deg,
+    rgba(51, 170, 255, 0.5),
+    rgba(51, 187, 153, 0.5)
+  );
   backdrop-filter: blur(4rem);
+}
+#msg {
+  position: fixed;
+  z-index: 2;
+  top: 5em;
+  right: 3em;
+  display: none;
+  flex-wrap: wrap;
+  width: 30vw;
+  min-width: 20em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background: linear-gradient(
+    30deg,
+    rgba(51, 170, 255, 0.5),
+    rgba(51, 187, 153, 0.5)
+  );
+  backdrop-filter: blur(1em);
+  box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
 }
 .banner {
   padding: 6rem 0;
   color: #fff;
-  background: linear-gradient(30deg, #3af, #3b9);
+  background: linear-gradient(
+    30deg,
+    rgba(51, 170, 255, 0.2),
+    rgba(51, 187, 153, 0.5)
+  );
+  backdrop-filter: blur(1em);
 }
-.banner mark {
+mark {
   border-radius: 0.2em;
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    30deg,
+    rgba(51, 170, 255, 0.5),
+    rgba(51, 187, 153, 0.2)
+  );
 }
+.pribtn {
+  display: inline-block;
+  padding: 0.2em 1em;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1em;
+}
+.pribtn:hover {
+  box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+}
+#bglist > .dropdown::before {
+  content: "☰ ";
+}
+#bglist > .dropdown {
+  padding: 1em 0;
+}
+#bglist > .dropdown > :last-child,
 #verlist {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+#bglist > .dropdown > :last-child > a,
 #verlist > div {
-  margin: 0.5rem;
   width: 15rem;
-  padding: 0.5rem;
+  margin: 0.5em;
+  padding: 0.5em;
   border-radius: 0.5rem;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.5em);
 }
-.pribtn {
-  display: inline-block;
-  min-width: 4em;
-  padding: 0.2em;
+#bglist > .dropdown > :last-child > a {
+  font-size: 0.8em;
   text-align: center;
-  color: #fff;
-  border-radius: 1em;
-  background: #08f;
 }
-#verlist > div:hover,
-.pribtn:hover {
-  box-shadow: 0.1em 0.2em 1em rgba(0, 0, 0, 0.2);
-}
-.mainbtn {
-  font-size: 1.5em;
-  padding: 0.2em 1em;
-  color: #fff;
-  border: 0.1em solid #fff;
-  background: none;
+#bglist > .dropdown > :last-child > a:hover,
+#verlist > div:hover {
+  background: linear-gradient(
+    30deg,
+    rgba(51, 170, 255, 0.5),
+    rgba(51, 187, 153, 0.5)
+  );
+  box-shadow: 4px 8px 0.5em rgba(0, 0, 0, 0.2);
 }
