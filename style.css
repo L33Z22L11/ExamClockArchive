@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 a:hover {
- text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 0.5em #fff;
 }
 ::selection {
   /* color: #3af; */
@@ -76,12 +76,12 @@ nav {
 #msg {
   position: fixed;
   z-index: 2;
-  top: 5em;
-  right: 3em;
+  top: 10vh;
+  right: 8vw;
   display: none;
   flex-wrap: wrap;
-  width: 30vw;
-  min-width: 20em;
+  width: 20em;
+  max-width: 80vw;
   padding: 0.5em;
   border-radius: 0.5em;
   background: linear-gradient(
@@ -133,9 +133,13 @@ mark {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (max-width: 640px) {
+  #verlist {
+    flex-direction: column;
+  }
+}
 #bglist > .dropdown > :last-child > a,
 #verlist > div {
-  width: 15rem;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 0.5rem;
