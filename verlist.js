@@ -47,8 +47,8 @@ var ver = [{
   name: "Beta 7.1", date: "211231",
   content: ["优化页脚文案", "更换背景托管商", "新年烟花视频背景(已失效)"],
 }, {
-  name: "Beta 8", date: "220110",
-  content: ["重构源代码", "优化性能", "美化选中样式"],
+  name: "Gamma 1", date: "220112",
+  content: ["重构源代码", "增设时光局", "更换主色、图标", "重新设计图标"],
 },];
 verlist = "";
 for (var i = 0; i < ver.length; i++) {

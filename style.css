@@ -121,13 +121,10 @@ mark {
 .pribtn:hover {
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
 }
-#bglist > .dropdown::before {
-  content: "☰ ";
+#bglist>details{
+  margin: 0.5em;
 }
-#bglist > .dropdown {
-  padding: 1em 0;
-}
-#bglist > .dropdown > :last-child,
+#bglist > details > .alist,
 #verlist {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +135,7 @@ mark {
     flex-direction: column;
   }
 }
-#bglist > .dropdown > :last-child > a,
+#bglist > details > .alist > a,
 #verlist > div {
   margin: 0.5em;
   padding: 0.5em;
@@ -147,11 +144,12 @@ mark {
   box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.5em);
 }
-#bglist > .dropdown > :last-child > a {
+#bglist > details > .alist > a {
   font-size: 0.8em;
   text-align: center;
+  display: inline-block;
 }
-#bglist > .dropdown > :last-child > a:hover,
+#bglist > details > .alist > a:hover,
 #verlist > div:hover {
   background: linear-gradient(
     30deg,
