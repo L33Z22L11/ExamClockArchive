@@ -98,7 +98,7 @@ nav {
   background: linear-gradient(
     30deg,
     rgba(51, 170, 255, 0.2),
-    rgba(51, 187, 153, 0.5)
+    rgba(51, 187, 153, 0.2)
   );
   backdrop-filter: blur(1em);
 }
