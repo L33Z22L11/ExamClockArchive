@@ -52,6 +52,9 @@ var ver = [{
 }, {
   name: "Gamma 2", date: "220210",
   content: ["再次重构源代码", "增设控制中心", "更换图标及对齐样式"],
+}, {
+  name: "Gamma 3", date: "220312",
+  content: ["更换字体及图标源", "增加疫情及学校专栏", "优化交互"],
 },];
 verlist = "";
 for (var i = 0; i < ver.length; i++) {
