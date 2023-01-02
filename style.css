@@ -7,11 +7,10 @@
 html {
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background: #eee fixed center url(/campus.jpg);
-  background-size: cover;
 }
 body {
-  background: rgba(0, 0, 0, 0.2);
+  background: #eee fixed center url(/campus.jpg);
+  background-size: cover;
 }
 a {
   cursor: pointer;
