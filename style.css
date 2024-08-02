@@ -1,159 +1,157 @@
 * {
   margin: 0;
   padding: 0;
-  transition: 0.2s;
   color: inherit;
 }
+
 html {
-  font-family: "Roboto", sans-serif;
   color: #fff;
+  font-family: "Roboto", sans-serif;
 }
+
 body {
   background: #eee fixed center url(/campus.jpg);
   background-size: cover;
 }
+
 a {
   cursor: pointer;
   text-decoration: none;
 }
+
 a:hover {
   text-shadow: 0 0 0.5em #fff;
 }
+
 ::selection {
   /* color: #3af; */
   background: rgba(255, 255, 255, 0.1);
   text-shadow: 2px 4px 1em #08f;
 }
+
 .ib {
   display: inline-block;
 }
+
 .dp1 {
   font-size: 3em;
 }
+
 .dp2 {
   font-size: 1.5em;
 }
+
 .dim {
-  font-size: 0.8em;
   opacity: 0.5;
+  font-size: 0.8em;
   /* color: rgba(255, 255, 255, 0.5); */
 }
+
 .center {
   text-align: center;
 }
+
+h2 {
+  margin-block: 1rem;
+}
+
 .sb {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1em;
+  align-items: center;
+  gap: .5em 1em;
 }
-section {
-  padding: 3em 0;
+
+p {
+  margin-block: 0.2em;
 }
-body > * {
-  box-shadow: 0 4px 1em rgba(0, 0, 0, 0.1);
-}
-body > * > *,
+
+body>*>*,
 .wrap {
+  vertical-align: middle;
+  margin-inline: auto;
   width: 90%;
   max-width: 80rem;
-  margin: auto;
-  vertical-align: middle;
 }
+
 nav {
   position: fixed;
   z-index: 1;
-  width: 100%;
-  padding: 0.5em 0;
-  background: linear-gradient(
-    30deg,
-    rgba(51, 170, 255, 0.5),
-    rgba(51, 187, 153, 0.5)
-  );
   backdrop-filter: blur(4rem);
+  background: linear-gradient(30deg,
+      rgba(51, 170, 255, 0.5),
+      rgba(51, 187, 153, 0.5));
+  padding: 1em 0;
+  width: 100%;
 }
+
 #msg {
+  display: flex;
   position: fixed;
-  z-index: 2;
   top: 10vh;
   right: 8vw;
-  display: none;
   flex-wrap: wrap;
-  width: 20em;
-  max-width: 80vw;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background: linear-gradient(
-    30deg,
-    rgba(51, 170, 255, 0.5),
-    rgba(51, 187, 153, 0.5)
-  );
+  z-index: 2;
   backdrop-filter: blur(1em);
   box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  background: linear-gradient(30deg,
+      rgba(51, 170, 255, 0.5),
+      rgba(51, 187, 153, 0.5));
+  padding: 0.5em;
+  width: 20em;
+  max-width: 80vw;
 }
+
 .banner {
+  backdrop-filter: blur(1em);
+  background: linear-gradient(30deg,
+      rgba(51, 170, 255, 0.2),
+      rgba(51, 187, 153, 0.2));
   padding: 6rem 0;
   color: #fff;
-  background: linear-gradient(
-    30deg,
-    rgba(51, 170, 255, 0.2),
-    rgba(51, 187, 153, 0.2)
-  );
-  backdrop-filter: blur(1em);
 }
+
 mark {
   border-radius: 0.2em;
-  background: linear-gradient(
-    30deg,
-    rgba(51, 170, 255, 0.5),
-    rgba(51, 187, 153, 0.2)
-  );
+  background: linear-gradient(30deg,
+      rgba(51, 170, 255, 0.5),
+      rgba(51, 187, 153, 0.2));
 }
+
 .pribtn {
   display: inline-block;
-  padding: 0.2em 1em;
-  text-align: center;
-  color: #fff;
   border: 1px solid #fff;
   border-radius: 1em;
+  padding: 0.2em 1em;
+  color: #fff;
+  text-align: center;
 }
+
 .pribtn:hover {
   box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
 }
-#bglist>details{
-  margin: 0.5em;
-}
-#bglist > details > .alist,
+
+#bgVolList,
 #verlist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-block: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1rem;
 }
-@media (max-width: 640px) {
-  #verlist {
-    flex-direction: column;
-  }
-}
-#bglist > details > .alist > a,
-#verlist > div {
-  margin: 0.5em;
-  padding: 0.5em;
+
+#bgVolList a,
+#verlist>div {
+  backdrop-filter: blur(0.5em);
+  box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 4px 1em rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(0.5em);
+  padding: 0.5em;
 }
-#bglist > details > .alist > a {
-  font-size: 0.9em;
-  text-align: center;
-  display: inline-block;
-}
-#bglist > details > .alist > a:hover,
-#verlist > div:hover {
-  background: linear-gradient(
-    30deg,
-    rgba(51, 170, 255, 0.5),
-    rgba(51, 187, 153, 0.5)
-  );
+
+#bgVolList a:hover,
+#verlist>div:hover {
   box-shadow: 4px 8px 0.5em rgba(0, 0, 0, 0.2);
+  background: linear-gradient(30deg, rgba(51, 170, 255, 0.5), rgba(51, 187, 153, 0.5));
 }

@@ -1,4 +1,4 @@
-var ver = [{
+const versions = [{
   name: "Alpha 1", date: "210401",
   content: ["文理科切换", "倒计时", "进度条"],
 }, {
@@ -56,13 +56,16 @@ var ver = [{
   name: "Gamma 3", date: "220312",
   content: ["更换字体及图标源", "增加疫情及学校专栏", "优化交互"],
 },];
-verlist = "";
-for (var i = 0; i < ver.length; i++) {
-  verlist += "<div>\n  <div class='sb'>\n    <div>\n      <h2>" + ver[i].name + "</h2>\n      <p class='dim'>更新日期: " + ver[i].date + "</p>\n    </div>\n    <a href='./" + ver[i].date + "/' class='pribtn'>访问</a>\n  </div>\n  <p>";
-  for (var j = 0; j < ver[i].content.length; j++) {
-    verlist += ver[i].content[j] + "<br>";
-  }
-  verlist += "</p>\n</div>\n";
-}
-// console.log(verlist);
-document.getElementById("verlist").innerHTML = verlist;
+
+document.querySelector('#verlist').innerHTML = versions.map(version => `
+  <div>
+    <div class="sb">
+      <div>
+        <h3>${version.name}</h3>
+        <p class="dim">更新日期: ${version.date}</p>
+      </div>
+      <a href="./${version.date}/" class="pribtn">访问</a>
+    </div>
+    ${version.content.map(para => `<p>${para}</p>`).join('\n')}
+  </div>
+`).join('\n');
