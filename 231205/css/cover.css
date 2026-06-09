@@ -1,0 +1,202 @@
+#coverLaunch {
+    font-size: .6em;
+
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding: 1rem;
+
+    animation: whiteSplash 2.5s forwards;
+    text-align: center;
+    pointer-events: none;
+
+    color: #333;
+    background: #fff fixed center url(https://a.xuewuzhibu.cn/24/656d964db3c37-24.png) no-repeat;
+    background-size: 40vw;
+}
+
+@keyframes whiteSplash {
+    0% {
+        filter: brightness(10);
+    }
+
+    50% {
+        filter: brightness(1);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+
+        opacity: 0;
+    }
+}
+
+#cover {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: .5s;
+
+    background: #333 fixed center url(https://a.xuewuzhibu.cn/24/656ca7c42eb90-24.jpg);
+    background-size: cover;
+}
+
+#cover>* {
+    margin: .5rem 1rem;
+}
+
+#coverMask {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+
+    background: rgba(0, 0, 0, .5);
+
+    backdrop-filter: blur(.2rem);
+}
+
+.coverMain {
+    display: flex;
+    justify-content: center;
+
+    gap: 5vw;
+}
+
+.skew {
+    overflow: hidden;
+
+    transform: skew(-15deg);
+}
+
+.coverMain>.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.coverMain>.info>.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 40vw;
+    margin: .5rem;
+    padding: .2rem;
+
+    background: #222;
+}
+
+.coverMain>.info>.title>.titleBadge {
+    height: calc(100% + 1rem);
+
+    color: #222;
+    background: #fff;
+}
+
+.coverMain>.info>.title>.titleBadge>.reskew {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 3.5em;
+    height: 100%;
+}
+
+.coverMain .reskew {
+    transform: skew(15deg);
+}
+
+.reskew>* {
+    margin: 0 .5rem;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#coverAuthor,
+.coverMain>.info>.desc,
+#cover> :last-child {
+    font-size: .6em;
+}
+
+.coverMain>.cover {
+    position: relative;
+
+    width: 40vw;
+    height: 30vw;
+    margin: auto 0;
+
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+}
+
+#coverImage {
+    position: fixed;
+    top: 0;
+    right: -5vw;
+    bottom: 0;
+    left: -5vw;
+
+    background: #333 fixed center url(https://a.xuewuzhibu.cn/24/656ca7c42eb90-24.jpg);
+    background-size: cover;
+}
+
+#cover .loadingBar {
+    position: relative;
+
+    overflow: hidden;
+}
+
+#cover .loadingBar::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    animation: loadingBarMask 1s ease-in-out infinite;
+
+    background: #fff;
+
+    backdrop-filter: brightness(.6) contrast(3);
+    mix-blend-mode: exclusion;
+}
+
+@keyframes loadingBarMask {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}

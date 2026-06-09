@@ -55,7 +55,40 @@ const versions = [{
 }, {
   name: "Gamma 3", date: "220312",
   content: ["更换字体及图标源", "增加疫情及学校专栏", "优化交互"],
-},];
+}, {
+  name: "Gamma 4", date: 220321,
+  content: ["优化页面结构", "调整菜单与搜索入口", "补充彩蛋资源"],
+}, {
+  name: "Gamma 5", date: 220901,
+  content: ["更新高三日常", "加入高考倒计时", "适配新学年使用场景"],
+}, {
+  name: "Gamma 6", date: 230101,
+  content: ["更新导航结构", "移除旧 slide 页面", "整理入口链接"],
+}, {
+  name: "Gamma 7", date: 230606,
+  content: ["2023 毕业特别企划", "增加高三纪念模式", "优化搜索与启动逻辑"],
+}, {
+  name: "Delta 1", date: 231205,
+  content: ["重构核心源码", "优化开屏与图库逻辑", "整理考试配置写法"],
+}, {
+  name: "Delta 2", date: 240406,
+  content: ["启用新的图库结构", "删除闲置控制中心代码", "精简页面交互"],
+}, {
+  name: "Delta 3", date: 240602,
+  content: ["移除部分工具组件", "收束开屏样式", "继续精简交互脚本"],
+}, {
+  name: "Delta 4", date: 240816,
+  content: ["加入研究生考试类型", "扩展考试时钟适用范围", "保留高中考试入口"],
+}, {
+  name: "Delta 5", date: 250805,
+  content: ["更新页脚内容", "调整 HTML 结构", "整理跳转页面链接"],
+}, {
+  name: "Delta 6", date: 260609,
+  content: ["同步 2026 年高考版本", "修正科目名称", "重构前最后一版"],
+}, /* {
+  name: "Epsilon 1", date: 260529,
+  content: ["改为浏览器原生 ES Modules", "拆分 config、features、engine、utils 目录", "新增项目协作说明"],
+}, */];
 
 document.querySelector('#verlist').innerHTML = versions.map(version => `
   <div>

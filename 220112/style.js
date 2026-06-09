@@ -13,7 +13,7 @@ window.onkeydown = function (e) {
   switch (e.key) {
     // 隐藏右键菜单
     case "Escape": eleMenu.style.display = "none"; break;
-    case "F12": if (confirm("若要访问GitHub上的源代码仓库来研究代码，请点击“确定”。")) { open("https://github.com/ThisisHost/exam-clock"); }
+    case "F12": if (confirm("若要访问GitHub上的源代码仓库来研究代码，请点击“确定”。")) { open("https://github.com/L33Z22L11/ExamClock"); }
     else if (confirm("确认要使用F12工具吗？由于本时钟的DOM元素属于异步加载、定时更新，你对网页所做的更改很可能会被随时覆盖。")) {
       alert("欢迎使用调试工具，若有问题或申请加入我项目组可与我联系，你将对自己所做的行为承担一切可能后果。");
     } else e.preventDefault(); break;
